@@ -14,11 +14,13 @@
 
 ### comments
 
+I didn't invent the technique, I got it from my teacher in 2011 or 2012.
+
 This is a console-like use of openFrameworks, it works on an image filename specified at the beginning of the code.
 
 The algorithm is explained in the code file main.cpp.
 
-The algorithm was used in one of my first coding projects in 2012.
+The algorithm was used in one of my first coding projects in 2011-2012.
 
 In 2019 I made a much better short uncommented version, with Qt.
 
