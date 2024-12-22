@@ -1,6 +1,6 @@
 // Translation from Qt C++ to openFrameworks C++ with ChatGPT o1,
 // of original code by Etienne Jacob.
-// Comments from ChatGPT, the original code was uncommented
+// Comments from ChatGPT, the original code was uncommented, it's there: https://gist.github.com/Bleuje/91c22639d0f312b38a07d19ee032739a
 
 #include "ofMain.h"       // for ofImage, ofColor, etc.
 #include <bits/stdc++.h>  // or include the specific STL headers you need
