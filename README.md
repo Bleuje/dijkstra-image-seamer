@@ -20,7 +20,7 @@ This is a console-like use of openFrameworks, it works on an image filename spec
 
 The algorithm is explained in the code file main.cpp.
 
-The algorithm was used in one of my first coding projects in 2011-2012.
+The algorithm was used in one of my first coding projects in 2012-2013.
 
 In 2019 I made a much better short uncommented version, with Qt.
 
