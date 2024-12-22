@@ -16,7 +16,7 @@
 
 This is a console-like use of openFrameworks, it works on an image filename specified at the beginning of the code.
 
-The algorithm is explained the code file main.cpp.
+The algorithm is explained in the code file main.cpp.
 
 The algorithm was used in one of my first coding projects in 2012.
 
