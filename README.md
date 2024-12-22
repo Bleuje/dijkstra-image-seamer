@@ -14,7 +14,7 @@
 
 ### comments
 
-I didn't invent the technique, I got it from my teacher in 2011 or 2012.
+I didn't invent the technique, I got it from my maths teacher in 2011 or 2012.
 
 This is a console-like use of openFrameworks, it works on an image filename specified at the beginning of the code.
 
