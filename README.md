@@ -23,3 +23,5 @@ The algorithm was used in one of my first coding projects in 2012.
 In 2019 I made a much better short uncommented version, with Qt.
 
 Today (December 22nd 2024) ChatGPT o1 translated it successfully for openFrameworks on first try and added explanations/comments.
+
+The Qt code from November 2019: https://gist.github.com/Bleuje/91c22639d0f312b38a07d19ee032739a
