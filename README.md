@@ -14,8 +14,6 @@
 
 ### comments
 
-An openFrameworks app can be run with "make && make run" command at project root.
-
 I didn't invent the algorithm idea, I got it from my maths teacher in 2011 or 2012.
 
 This is a console-like use of openFrameworks, it works on an image filename specified at the beginning of the code.
