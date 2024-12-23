@@ -18,7 +18,7 @@ Larger image from small image
 
 I didn't invent the algorithm idea, I got it from my maths teacher in 2011 or 2012.
 
-This is a console-like use of openFrameworks, it works on an image filename specified at the beginning of the code.
+This is a console-like use of openFrameworks.
 
 The algorithm is explained in the code file main.cpp.
 

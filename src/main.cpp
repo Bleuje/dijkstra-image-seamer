@@ -11,8 +11,6 @@ using namespace std;
 //--------------------------------------------------------------------
 // Constants
 //--------------------------------------------------------------------
-#define FILENAME           "rocks.jpg"       // Original input image filename
-#define RESULT_FILENAME    "result1.png" // Final stitched output
 const bool SHOW_BORDER      = false;         // If true, highlight seam in red
 
 /*
@@ -532,12 +530,21 @@ ofImage performAlgoV(const ofImage &img){
 // an image, runs the horizontal & vertical seam stitching, saves
 // the final result, and prints elapsed time to the console.
 //--------------------------------------------------------------------
-int main(){
+int main(int argc, char* argv[]) {
+    if (argc < 3) {
+        std::cerr << "Usage: " << argv[0] << " <input_image> <output_image>" << std::endl;
+        return 1;
+    }
+
+    std::string inputFilename = argv[1];
+    std::string outputFilename = argv[2];
+
+
     // Attempt to load the original image
     ofImage img;
-    bool loaded = img.load(FILENAME);
+    bool loaded = img.load(inputFilename);
     if(!loaded){
-        cerr << "Could not load image: " << FILENAME << endl;
+        cerr << "Could not load image: " << inputFilename << endl;
         return -1;
     }
 
@@ -555,7 +562,7 @@ int main(){
     // resImg = performAlgoH(resImg);
 
     // Save the final stitched result
-    resImg.save(RESULT_FILENAME);
+    resImg.save(outputFilename);
 
     // Stop timing 
     auto endTime = std::chrono::high_resolution_clock::now();
@@ -563,7 +570,7 @@ int main(){
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime).count();
 
     // Print summary
-    cout << "Done. Saved " << RESULT_FILENAME << "." << endl;
+    cout << "Done. Saved " << outputFilename << "." << endl;
     cout << "Elapsed time: " << duration << " ms." << endl;
 
     return 0;
