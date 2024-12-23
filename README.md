@@ -1,5 +1,7 @@
 ## dijkstra image seamer
 
+Larger image from small image
+
 ![original grass image](/bin/data/grass.png)
 
 ![stitched grass images](/doc/result2.png)
