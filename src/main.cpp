@@ -147,10 +147,7 @@ vector<vector<ofColor>> rotate(const vector<vector<ofColor>> &vec){
 //--------------------------------------------------------------------
 vector<vector<ofColor>> unrotate(const vector<vector<ofColor>> &vec){
     // rotate 3 times
-    vector<vector<ofColor>> r1 = rotate(vec);
-    vector<vector<ofColor>> r2 = rotate(r1);
-    vector<vector<ofColor>> r3 = rotate(r2);
-    return r3;
+    return rotate(rotate(rotate(vec)));
 }
 
 //--------------------------------------------------------------------
