@@ -18,7 +18,7 @@ Larger image from small image
 
 I didn't invent the algorithm idea, I got it from my maths teacher in 2011 or 2012.
 
-This is a console-like use of openFrameworks. The program takes as arguments input and output image filenames. (on linux I run `make && ./bin/texture-path input.png output.png`)
+This is a console-like use of openFrameworks. The program takes as arguments input and output image filenames. (on linux I run `make && ./bin/texture-path <input_image> <output_image> [--show-seam]`)
 
 The algorithm is explained in the code file main.cpp.
 

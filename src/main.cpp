@@ -8,11 +8,6 @@
 
 using namespace std;
 
-//--------------------------------------------------------------------
-// Constants
-//--------------------------------------------------------------------
-const bool SHOW_BORDER      = false;         // If true, highlight seam in red
-
 /*
 ==============================================================================
  ALGORITHM OVERVIEW
@@ -47,7 +42,7 @@ const bool SHOW_BORDER      = false;         // If true, highlight seam in red
  5) MERGING THE FINAL IMAGE
     - Using the mask, each output pixel is assigned from either the left image 
       region or the right image region, avoiding double coverage of the overlap.
-    - Pixels on the seam can be colored red (if `SHOW_BORDER` is true), or 
+    - Pixels on the seam can be colored red (if `SHOW_SEAM` is true), or 
       averaged between the left and right to smooth the boundary.
 
  6) HORIZONTAL VS. VERTICAL
@@ -74,6 +69,7 @@ const int START_WINDOW_SIZE = 11;
 // a more thorough search but can handle the extra computation time.)
 const int FIND_OFFSET_STEP  = 4;
 
+bool SHOW_SEAM = false;
 //--------------------------------------------------------------------
 
 // Move directions for dijkstra / flood fill
@@ -418,11 +414,11 @@ vector<vector<ofColor>> imageFromDijsktra(const vector<vector<ofColor>> &im,
             }
             else {
                 // Overlapping region not explicitly assigned => on the "border".
-                // If SHOW_BORDER is true, highlight in red. Else, average the pixels.
+                // If SHOW_SEAM is true, highlight in red. Else, average the pixels.
                 ofColor c1 = im[i][j];
                 int jj = j - (w - offset);
                 ofColor c2 = im[i][jj];
-                if(SHOW_BORDER){
+                if(SHOW_SEAM){
                     out[i][j] = ofColor(255,0,0,255); // red line
                 } else {
                     // average the two
@@ -536,6 +532,10 @@ int main(int argc, char* argv[]) {
     std::string inputFilename = argv[1];
     std::string outputFilename = argv[2];
 
+    // Check for the optional "--show-seam" argument
+    if (argc > 3 && std::string(argv[3]) == "--show-seam") {
+        SHOW_SEAM = true;
+    }
 
     // Attempt to load the original image
     ofImage img;
